@@ -22,7 +22,7 @@ server.on('request', function(req, res) {//httpリクエストがあった(=ア�
         apiRes.on('end', function() {//データの受信が終わったら呼ばれる
             var data = {};
             data.animes = JSON.parse(body);
-            var template = fs.readFileSync('./practice2.ejs', 'utf-8');
+            var template = fs.readFileSync('./app.ejs', 'utf-8');
             var page = ejs.render(template, data);
             res.writeHead(200, {'Content-Type': 'text/html; charset=UTF-8'});
             res.write(page);
