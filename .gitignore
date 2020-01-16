@@ -332,3 +332,6 @@ ASALocalRun/
 
 #nodemodules
 **/node_modules/
+
+# config URL
+config.js
